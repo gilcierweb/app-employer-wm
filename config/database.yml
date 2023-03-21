@@ -82,6 +82,8 @@ test:
 #
 production:
   <<: *default
-  database: app_employer_wm_production
-  username: app_employer_wm
-  password: <%= ENV["APP_EMPLOYER_WM_DATABASE_PASSWORD"] %>
+  port: <%= ENV.fetch("RAILDATABASE_PORT") { 5432 } %>
+  url: <%= ENV["DATABASE_URL"] %>
+#  database: app_employer_wm_production
+#  username: app_employer_wm
+#  password: <%#= ENV["APP_EMPLOYER_WM_DATABASE_PASSWORD"] %>
