@@ -16,4 +16,7 @@ class PagesController < ApplicationController
 
   def contacts
   end
+
+  def send_contacts
+  end
 end
