@@ -38,7 +38,7 @@ Things you may want to cover:
 - Docker
 - Docker Compose
 
-### Run App
+### Run App in Development
 
 ```shell
 ./bin/dev
