@@ -70,3 +70,13 @@ docker-compose run --rm app yarn install --check-files
 
 # run http://localhost:3000
 ```
+```text
+user
+    employer
+        name
+        function
+        user_id
+    holiday season
+        employer_id
+    
+```

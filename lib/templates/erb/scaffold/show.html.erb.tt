@@ -1,0 +1,10 @@
+<p style="color: green"><%%= notice %></p>
+
+<%%= render @<%= singular_table_name %> %>
+
+<div>
+  <%%= link_to t('edit'), <%= edit_helper(type: :path) %>, class: 'btn btn-primary' %> |
+  <%%= link_to t('back'), <%= index_helper(type: :path) %>, class: 'btn btn-default' %>
+
+  <%%= button_to t('destroy'), <%= model_resource_name(prefix: "@") %>, method: :delete %>
+</div>

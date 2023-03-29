@@ -6,5 +6,6 @@ import "./admin/vendor/circle-progress"
 import "./admin/vendor/setting"
 // AOS Animation Plugin
 import "./admin/aos/aos.js"
+import "./admin/custom"
 import "./admin/hope-ui"
 
