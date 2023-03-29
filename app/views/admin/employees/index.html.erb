@@ -1,0 +1,54 @@
+<div class="card">
+  <div class="card-header d-flex justify-content-between">
+    <div class="header-title">
+
+      <h1>Funcionários</h1>
+    </div>
+  </div>
+  <div id="companies" class="card-body p-0">
+    <div class="table-responsive mt-4">
+
+      <table id="basic-table-employees" class="table table-striped mb-0" role="grid">
+        <thead class="text-primary">
+        <tr>
+          <th><%= t('activerecord.attributes.employee.name') %></th>
+          <th><%= t('activerecord.attributes.employee.admission_date') %></th>
+          <th><%= t('activerecord.attributes.employee.cpf') %></th>
+          <th><%= t('activerecord.attributes.employee.email') %></th>
+          <th><%= t('activerecord.attributes.employee.birth_date') %></th>
+          <th><%= t('activerecord.attributes.employee.location') %></th>
+          <th><%= t('activerecord.attributes.employee.function') %></th>
+          <th><%= t('activerecord.attributes.employee.wallet_working') %></th>
+          <th><%= t('activerecord.attributes.employee.gross_salary') %></th>
+          <th><%= t('activerecord.attributes.employee.active') %></th>
+          <th><%= t('activerecord.attributes.employee.company') %></th>
+          <th><%= t('action') %></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @employees.each do |employee| %>
+          <tr>
+            <td><%= employee.name %></td>
+            <td><%= employee.admission_date %></td>
+            <td><%= employee.cpf %></td>
+            <td><%= employee.email %></td>
+            <td><%= employee.birth_date %></td>
+            <td><%= employee.location %></td>
+            <td><%= employee.function %></td>
+            <td><%= employee.wallet_working %></td>
+            <td><%= employee.gross_salary %></td>
+            <td><%= display_boolean(employee.active) %></td>
+            <td><%= employee.company.name %></td>
+            <td><%= link_to t('show'), [:admin, employee], class: 'btn btn-info' %>
+              <%= link_to t('edit'), edit_admin_employee_path(employee), class: 'btn btn-primary' %>
+              <%= link_to t('destroy'), [:admin, employee], method: :delete, data: { confirm: t('confirm') }, class: 'btn btn-danger' %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+
+    <%= link_to t('new'), new_admin_employee_path, class: 'btn btn-success' %>
+  </div>
+</div>
+</div>

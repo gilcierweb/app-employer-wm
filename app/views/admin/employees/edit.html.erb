@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-header d-flex justify-content-between">
+    <div class="header-title">
+      <h1>Editing employee</h1>
+    </div>
+  </div>
+  <div class="card-body">
+    <%= render "form", employee: @employee %>
+
+    <br>
+
+    <div>
+      <%= link_to t('show'), [:admin, @employee], class: 'btn btn-info' %> |
+      <%= link_to t('back'), admin_employees_path, class: 'btn btn-default' %>
+    </div>
+  </div>
+</div>

@@ -61,7 +61,7 @@
           </a>
           <ul class="sub-nav collapse" id="horizontal-menu" data-bs-parent="#sidebar-menu">
             <li class="nav-item">
-              <a class="nav-link " href="../dashboard/index-horizontal.html">
+                <%= link_to admin_employees_path, class: 'nav-link' do %>
                 <i class="icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                     <g>
@@ -69,12 +69,12 @@
                     </g>
                   </svg>
                 </i>
-                <i class="sidenav-mini-icon"> H </i>
-                <span class="item-name"> Horizontal </span>
-              </a>
+                <i class="sidenav-mini-icon"> L </i>
+                <span class="item-name"> Listagem </span>
+             <% end %>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="../dashboard/index-dual-horizontal.html">
+              <%= link_to new_admin_employee_path, class: 'nav-link' do %>
                 <i class="icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                     <g>
@@ -82,48 +82,9 @@
                     </g>
                   </svg>
                 </i>
-                <i class="sidenav-mini-icon"> D </i>
-                <span class="item-name">Dual Horizontal</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="../dashboard/index-dual-compact.html">
-                <i class="icon svg-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
-                    <g>
-                      <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                    </g>
-                  </svg>
-                </i>
-                <i class="sidenav-mini-icon"> D </i>
-                <span class="item-name">Dual Compact</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="../dashboard/index-boxed.html">
-                <i class="icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
-                    <g>
-                      <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                    </g>
-                  </svg>
-                </i>
-                <i class="sidenav-mini-icon"> B </i>
-                <span class="item-name">Boxed Horizontal</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="../dashboard/index-boxed-fancy.html">
-                <i class="icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
-                    <g>
-                      <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                    </g>
-                  </svg>
-                </i>
-                <i class="sidenav-mini-icon"> B </i>
-                <span class="item-name">Boxed Fancy</span>
-              </a>
+                <i class="sidenav-mini-icon"> N </i>
+                <span class="item-name">Novo</span>
+              <% end %>
             </li>
           </ul>
         </li>

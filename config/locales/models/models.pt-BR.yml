@@ -8,6 +8,9 @@ pt-BR:
       company:
         one: "Empresa"
         other: "Empresas"
+      employee:
+          one: "Funcionário"
+          other: "Funcionários"
       contact:
         one: "Contato"
         other: "Contatos"
@@ -35,6 +38,23 @@ pt-BR:
         birth_date: 'Data de Fundação'
         logo: 'Logo'
         active: 'Status'
+        actives:
+          active: 'Ativo'
+          inactive: 'Inativo'
+
+      employee:
+        name: 'Nome'
+        admission_date: 'Data de Admissão'
+        cpf: 'CPF'
+        email: 'Email'
+        location: 'Endereço completo'
+        description: 'Descrição'
+        birth_date: 'Data de aniversário'
+        function: 'Função'
+        wallet_working: 'Carteira de trabalho'
+        gross_salary: 'Salário bruto'
+        active: 'Status'
+        company_id: 'Empresa'
         actives:
           active: 'Ativo'
           inactive: 'Inativo'
