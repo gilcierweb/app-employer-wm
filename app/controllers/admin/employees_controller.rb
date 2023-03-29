@@ -25,7 +25,7 @@ class Admin::EmployeesController < AdminController
 
     respond_to do |format|
       if @employee.save
-        format.html { redirect_to admin_employee_url(@employee), notice: "Employee was successfully created." }
+        format.html { redirect_to admin_employee_url(@employee), notice: t('controller.create') }
         format.json { render :show, status: :created, location: @employee }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class Admin::EmployeesController < AdminController
   def update
     respond_to do |format|
       if @employee.update(employee_params)
-        format.html { redirect_to admin_employee_url(@employee), notice: "Employee was successfully updated." }
+        format.html { redirect_to admin_employee_url(@employee), notice: t('controller.update') }
         format.json { render :show, status: :ok, location: @employee }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class Admin::EmployeesController < AdminController
     @employee.destroy
 
     respond_to do |format|
-      format.html { redirect_to admin_employees_url, notice: "Employee was successfully destroyed." }
+      format.html { redirect_to admin_employees_url, notice: t('controller.destroy') }
       format.json { head :no_content }
     end
   end

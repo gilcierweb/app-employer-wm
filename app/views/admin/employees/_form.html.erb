@@ -56,12 +56,22 @@
     <%= form.text_field :gross_salary, class: "form-control" %>
   </div>
 
-  <div class="mb-3">
-    <%= form.label :active, class: "form-label" %>
-    <%= form.check_box :active, class: "form-control" %>
+  <div class="col-md-4 mb-3">
+    <div class="form-group">
+      <%= form.label :active, class: "form-label" %><br>
+
+      <div class="form-check form-check-inline">
+        <%= form.radio_button(:active, :yes, class: 'form-check-input') %>
+        <%= form.label :active_yes, t('activerecord.attributes.employee.actives.active'), class: 'form-check-label' %>
+      </div>
+      <div class="form-check form-check-inline">
+        <%= form.radio_button(:active, :no, class: 'form-check-input') %>
+        <%= form.label :active_no, t('activerecord.attributes.employee.actives.inactive'), class: 'form-check-label' %>
+      </div>
+    </div>
   </div>
 
-  <div class="mb-3">
+  <div class="col-md-8 mb-3">
     <%= form.label :company_id, class: "form-label" %>
     <%= form.select(:company_id, Company.select_list(), { :prompt => t('form.select') }, { class: 'form-control form-control-lg', disabled: nil }) %>
 

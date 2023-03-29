@@ -56,6 +56,12 @@ pt-BR:
     add_clone: 'Adicionar variações'
     remove: 'Remover'
     reset: 'Limpar'
+
+  controller:
+    create: 'Dados criados com sucesso.'
+    update: 'Dados atualizados com sucesso.'
+    destroy: 'Dados removidos com sucesso.'
+
   unauthorized:
     default: "Não autorizado."
     manage:
