@@ -8,8 +8,8 @@ class CreatePeriodsVacations < ActiveRecord::Migration[7.0]
       t.decimal :average_value
       t.integer :number_dependents
       t.decimal :pension_alimentary
-      t.boolean :bonus_pecuniary
-      t.boolean :advance_parcel
+      t.boolean :bonus_pecuniary, default: false
+      t.boolean :advance_parcel, default: false
       t.integer :days
       t.references :employee, null: false, foreign_key: true
 
