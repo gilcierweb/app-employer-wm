@@ -3,7 +3,7 @@ class Admin::CompaniesController < AdminController
 
   # GET /admin/companies or /admin/companies.json
   def index
-    @companies = Company.all
+    @pagy, @companies = pagy(Company.recently_created)
   end
 
   # GET /admin/companies/1 or /admin/companies/1.json

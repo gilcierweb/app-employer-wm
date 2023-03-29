@@ -1,4 +1,6 @@
 class Company < ApplicationRecord
+  scope :recently_created, -> { order(created_at: :desc) }
+
   has_many :employees
 
   enum status: {no: false, yes: true}

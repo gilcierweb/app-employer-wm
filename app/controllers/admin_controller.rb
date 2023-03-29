@@ -1,3 +1,5 @@
-class AdminController < ApplicationController 
-   layout 'admin'  
+class AdminController < ApplicationController
+   include Pagy::Backend
+
+   layout 'admin'
 end

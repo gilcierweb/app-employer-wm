@@ -3,7 +3,7 @@ class Admin::EmployeesController < AdminController
 
   # GET /admin/employees or /admin/employees.json
   def index
-    @employees = Employee.all
+    @pagy, @employees = pagy(Employee.recently_created)
   end
 
   # GET /admin/employees/1 or /admin/employees/1.json
