@@ -1,9 +1,9 @@
 class Company < ApplicationRecord
-  scope :recently_created, -> { order(created_at: :desc) }
+  include Orderable
 
   has_many :employees
 
-  enum status: {no: false, yes: true}
+  enum status: { no: false, yes: true }
 
   validates_presence_of :name
   validates_presence_of :fantasy_name

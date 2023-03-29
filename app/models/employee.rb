@@ -1,9 +1,9 @@
 class Employee < ApplicationRecord
-  scope :recently_created, -> { order(created_at: :desc) }
+  include Orderable
 
   belongs_to :company
 
-  enum active: {no: false, yes: true}
+  enum active: { no: false, yes: true }
 
   validates_presence_of :name
   validates_presence_of :admission_date
