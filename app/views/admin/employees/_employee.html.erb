@@ -1,57 +1,57 @@
 <div id="<%= dom_id employee %>">
   <p>
-    <strong>Name:</strong>
+    <strong><%= t('activerecord.attributes.employee.name') %>:</strong>
     <%= employee.name %>
   </p>
 
   <p>
-    <strong>Admission date:</strong>
+    <strong><%= t('activerecord.attributes.employee.admission_date') %>:</strong>
     <%= employee.admission_date %>
   </p>
 
   <p>
-    <strong>Cpf:</strong>
+    <strong><%= t('activerecord.attributes.employee.cpf') %>:</strong>
     <%= employee.cpf %>
   </p>
 
   <p>
-    <strong>Email:</strong>
+    <strong><%= t('activerecord.attributes.employee.email') %>:</strong>
     <%= employee.email %>
   </p>
 
   <p>
-    <strong>Birth date:</strong>
+    <strong><%= t('activerecord.attributes.employee.birth_date') %>:</strong>
     <%= employee.birth_date %>
   </p>
 
   <p>
-    <strong>Location:</strong>
+    <strong><%= t('activerecord.attributes.employee.location') %>:</strong>
     <%= employee.location %>
   </p>
 
   <p>
-    <strong>Function:</strong>
+    <strong><%= t('activerecord.attributes.employee.function') %>:</strong>
     <%= employee.function %>
   </p>
 
   <p>
-    <strong>Wallet working:</strong>
+    <strong><%= t('activerecord.attributes.employee.wallet_working') %>:</strong>
     <%= employee.wallet_working %>
   </p>
 
   <p>
-    <strong>Gross salary:</strong>
+    <strong><%= t('activerecord.attributes.employee.gross_salary') %>:</strong>
     <%= employee.gross_salary %>
   </p>
 
   <p>
-    <strong>Active:</strong>
-    <%= employee.active %>
+    <strong><%= t('activerecord.attributes.employee.active') %>:</strong>
+    <%= display_boolean(employee.active) %>
   </p>
 
   <p>
-    <strong>Company:</strong>
-    <%= employee.company_id %>
+    <strong><%= t('activerecord.attributes.employee.company_id') %>:</strong>
+    <%= employee.company.name %>
   </p>
 
 </div>

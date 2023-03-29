@@ -41,7 +41,7 @@
             <td><%= employee.company.name %></td>
             <td><%= link_to t('show'), [:admin, employee], class: 'btn btn-info' %>
               <%= link_to t('edit'), edit_admin_employee_path(employee), class: 'btn btn-primary' %>
-              <%= link_to t('destroy'), [:admin, employee], method: :delete, data: { confirm: t('confirm') }, class: 'btn btn-danger' %></td>
+              <%= link_to t('destroy'), [:admin, employee], data: {turbo_method: :delete, turbo_confirm: t('confirm')}, class: 'btn btn-danger' %></td>
           </tr>
         <% end %>
         </tbody>
