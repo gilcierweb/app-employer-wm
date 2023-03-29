@@ -1,0 +1,56 @@
+<div class="card">
+  <div class="card-header d-flex justify-content-between">
+    <div class="header-title">
+
+      <h1>Períodos de Férias</h1>
+    </div>
+  </div>
+  <div id="companies" class="card-body p-0">
+    <div class="table-responsive mt-4">
+
+      <table id="basic-table-periods_vacations" class="table table-striped mb-0" role="grid">
+        <thead class="text-primary">
+        <tr>
+          <th><%= t('activerecord.attributes.periods_vacation.name') %></th>
+          <th><%= t('activerecord.attributes.periods_vacation.date_start') %></th>
+          <th><%= t('activerecord.attributes.periods_vacation.date_end') %></th>
+          <th><%= t('activerecord.attributes.periods_vacation.gross_salary') %></th>
+          <th><%= t('activerecord.attributes.periods_vacation.average_value') %></th>
+          <th><%= t('activerecord.attributes.periods_vacation.number_dependents') %></th>
+          <th><%= t('activerecord.attributes.periods_vacation.pension_alimentary') %></th>
+          <th><%= t('activerecord.attributes.periods_vacation.bonus_pecuniary') %></th>
+          <th><%= t('activerecord.attributes.periods_vacation.advance_parcel') %></th>
+          <th><%= t('activerecord.attributes.periods_vacation.days') %></th>
+          <th><%= t('activerecord.attributes.periods_vacation.employee') %></th>
+          <th><%= t('action') %></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @periods_vacations.each do |periods_vacation| %>
+          <tr>
+            <td><%= periods_vacation.name %></td>
+            <td><%= periods_vacation.date_start %></td>
+            <td><%= periods_vacation.date_end %></td>
+            <td><%= periods_vacation.gross_salary %></td>
+            <td><%= periods_vacation.average_value %></td>
+            <td><%= periods_vacation.number_dependents %></td>
+            <td><%= periods_vacation.pension_alimentary %></td>
+            <td><%= periods_vacation.bonus_pecuniary %></td>
+            <td><%= periods_vacation.advance_parcel %></td>
+            <td><%= periods_vacation.days %></td>
+            <td><%= periods_vacation.employee %></td>
+            <td><%= link_to t('show'), [:admin, periods_vacation], class: 'btn btn-info' %>
+              <%= link_to t('edit'), edit_periods_vacation_path(periods_vacation), class: 'btn btn-primary' %>
+              <%= link_to t('destroy'), periods_vacation, method: :delete, data: { confirm: t('confirm') }, class: 'btn btn-danger' %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+
+    <%== pagy_bootstrap_nav(@pagy) %>
+
+    <%= link_to t('new'), new_admin_periods_vacation_path, class: 'btn btn-success' %>
+  </div>
+</div>
+</div>

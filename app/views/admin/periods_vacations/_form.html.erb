@@ -1,0 +1,92 @@
+<%= form_with(model: [:admin, periods_vacation], class: "row g-3") do |form| %>
+  <% if periods_vacation.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <h2><%= pluralize(periods_vacation.errors.count, "error") %> prohibited this periods_vacation from being saved:</h2>
+
+      <ul>
+        <% periods_vacation.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="col-md-6 mb-3">
+    <%= form.label :employee_id, class: "form-label" %>
+    <%= form.select(:employee_id, Employee.select_list(), { :prompt => t('form.select') }, { class: 'form-control form-control-lg form-select', disabled: nil }) %>
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <%= form.label :name, class: "form-label" %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <%= form.label :date_start, class: "form-label" %>
+    <%= form.date_field :date_start, class: "form-control dateflatpickr" %>
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <%= form.label :date_end, class: "form-label" %>
+    <%= form.date_field :date_end, class: "form-control dateflatpickr" %>
+  </div>
+
+  <div class="col-md-4 mb-3">
+    <%= form.label :gross_salary, class: "form-label" %>
+    <%= form.text_field :gross_salary, class: "form-control" %>
+  </div>
+
+  <div class="col-md-4 mb-3">
+    <%= form.label :average_value, class: "form-label" %>
+    <%= form.text_field :average_value, class: "form-control" %>
+  </div>
+
+  <div class="col-md-4 mb-3">
+    <%= form.label :days, class: "form-label" %>
+    <%= form.number_field :days, class: "form-control" %>
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <%= form.label :number_dependents, class: "form-label" %>
+    <%= form.number_field :number_dependents, class: "form-control" %>
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <%= form.label :pension_alimentary, class: "form-label" %>
+    <%= form.text_field :pension_alimentary, class: "form-control" %>
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <div class="form-group">
+      <%= form.label :bonus_pecuniary, class: "form-label" %><br>
+
+      <div class="form-check form-check-inline">
+        <%= form.radio_button(:bonus_pecuniary, :yes, class: 'form-check-input') %>
+        <%= form.label :bonus_pecuniary_yes, t('form.yesa'), class: 'form-check-label' %>
+      </div>
+      <div class="form-check form-check-inline">
+        <%= form.radio_button(:bonus_pecuniary, :no, class: 'form-check-input') %>
+        <%= form.label :bonus_pecuniary_no, t('form.noa'), class: 'form-check-label' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <div class="form-group">
+      <%= form.label :advance_parcel, class: "form-label" %><br>
+
+      <div class="form-check form-check-inline">
+        <%= form.radio_button(:advance_parcel, :yes_ap, class: 'form-check-input') %>
+        <%= form.label :advance_parcel_yes_ap, t('form.yesa'), class: 'form-check-label' %>
+      </div>
+      <div class="form-check form-check-inline">
+        <%= form.radio_button(:advance_parcel, :no_ap, class: 'form-check-input') %>
+        <%= form.label :advance_parcel_no_ap, t('form.noa'), class: 'form-check-label' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+<% end %>

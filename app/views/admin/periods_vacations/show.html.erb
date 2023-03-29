@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-header d-flex justify-content-between">
+    <div class="header-title">
+      <h1>Visualizando período de férias</h1>
+    </div>
+  </div>
+  <div class="card-body">
+    <%= render @periods_vacation %>
+
+    <div>
+      <%= link_to t('edit'), edit_admin_periods_vacation_path(@periods_vacation), class: 'btn btn-primary' %> |
+      <%= link_to t('back'), admin_periods_vacations_path, class: 'btn btn-default' %>
+
+      <%= button_to t('destroy'), [:admin, @periods_vacation], data: {turbo_method: :delete, turbo_confirm: t('confirm')}, class: 'btn btn-danger'  %>
+    </div>
+  </div>
+</div>

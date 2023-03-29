@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-header d-flex justify-content-between">
+    <div class="header-title">
+      <h1>Novo período de férias</h1>
+    </div>
+  </div>
+  <div class="card-body">
+    <%= render "form", periods_vacation: @periods_vacation %>
+
+    <br>
+
+    <div>
+      <%= link_to t('back'), admin_periods_vacations_path, class: 'btn btn-default' %>
+    </div>
+  </div>
+</div>

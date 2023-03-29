@@ -11,6 +11,9 @@ pt-BR:
       employee:
           one: "Funcionário"
           other: "Funcionários"
+      periods_vacation:
+          one: "Período de férias"
+          other: "Períodos de férias"
       contact:
         one: "Contato"
         other: "Contatos"
@@ -58,6 +61,25 @@ pt-BR:
         actives:
           active: 'Ativo'
           inactive: 'Inativo'
+
+      periods_vacation:
+        name: 'Nome período de férias'
+        date_start: 'Data início'
+        date_end: 'Data fim'
+        average_value: 'Valor médio de outros proventos'
+        number_dependents: 'Número de dependentes'
+        pension_alimentary: 'Pensão alimentícia'
+        bonus_pecuniary: 'Abono pecuniário?'
+        advance_parcel: 'Adiantamento do 13º salário?'
+        gross_salary: 'Salário bruto'
+        days: 'Dias'
+        employee_id: 'Funcionário'
+        bonus_pecuniaries:
+          yes: 'sim'
+          no: 'Não'
+        advance_parcels:
+          yes: 'sim'
+          no: 'Não'
 
       contact:
         full_name: 'Nome completo'

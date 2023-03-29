@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_29_105518) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_29_161612) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -45,6 +45,23 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_29_105518) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["company_id"], name: "index_employees_on_company_id"
+  end
+
+  create_table "periods_vacations", force: :cascade do |t|
+    t.string "name"
+    t.date "date_start"
+    t.date "date_end"
+    t.decimal "gross_salary"
+    t.decimal "average_value"
+    t.integer "number_dependents"
+    t.decimal "pension_alimentary"
+    t.boolean "bonus_pecuniary"
+    t.boolean "advance_parcel"
+    t.integer "days"
+    t.bigint "employee_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["employee_id"], name: "index_periods_vacations_on_employee_id"
   end
 
   create_table "roles", force: :cascade do |t|
@@ -83,4 +100,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_29_105518) do
   end
 
   add_foreign_key "employees", "companies"
+  add_foreign_key "periods_vacations", "employees"
 end

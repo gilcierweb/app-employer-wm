@@ -56,6 +56,8 @@ pt-BR:
     add_clone: 'Adicionar variações'
     remove: 'Remover'
     reset: 'Limpar'
+    yesa: 'Sim'
+    noa: 'Não'
 
   controller:
     create: 'Dados criados com sucesso.'
