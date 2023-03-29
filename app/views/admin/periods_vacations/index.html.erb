@@ -31,24 +31,24 @@
             <td><%= periods_vacation.name %></td>
             <td><%= periods_vacation.date_start %></td>
             <td><%= periods_vacation.date_end %></td>
-            <td><%= periods_vacation.gross_salary %></td>
+            <td><%= number_to_currency(periods_vacation.gross_salary) %></td>
             <td><%= periods_vacation.average_value %></td>
             <td><%= periods_vacation.number_dependents %></td>
             <td><%= periods_vacation.pension_alimentary %></td>
             <td><%= periods_vacation.bonus_pecuniary %></td>
             <td><%= periods_vacation.advance_parcel %></td>
             <td><%= periods_vacation.days %></td>
-            <td><%= periods_vacation.employee %></td>
+            <td><%= periods_vacation.employee.name %></td>
             <td><%= link_to t('show'), [:admin, periods_vacation], class: 'btn btn-info' %>
-              <%= link_to t('edit'), edit_periods_vacation_path(periods_vacation), class: 'btn btn-primary' %>
-              <%= link_to t('destroy'), periods_vacation, method: :delete, data: { confirm: t('confirm') }, class: 'btn btn-danger' %></td>
+              <%= link_to t('edit'), edit_admin_periods_vacation_path(periods_vacation), class: 'btn btn-primary' %>
+              <%= link_to t('destroy'), [:admin, periods_vacation], method: :delete, data: { confirm: t('confirm') }, class: 'btn btn-danger' %></td>
           </tr>
         <% end %>
         </tbody>
       </table>
     </div>
 
-    <%== pagy_bootstrap_nav(@pagy) %>
+    <%== pagy_bootstrap_nav(@pagy) if @pagy.pages > 1 %>
 
     <%= link_to t('new'), new_admin_periods_vacation_path, class: 'btn btn-success' %>
   </div>

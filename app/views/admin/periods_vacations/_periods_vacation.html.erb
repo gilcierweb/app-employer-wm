@@ -1,57 +1,57 @@
 <div id="<%= dom_id periods_vacation %>">
   <p>
-    <strong>Name:</strong>
+    <strong><%= t('activerecord.attributes.periods_vacation.name') %>:</strong>
     <%= periods_vacation.name %>
   </p>
 
   <p>
-    <strong>Date start:</strong>
+    <strong><%= t('activerecord.attributes.periods_vacation.date_start') %>:</strong>
     <%= periods_vacation.date_start %>
   </p>
 
   <p>
-    <strong>Date end:</strong>
+    <strong><%= t('activerecord.attributes.periods_vacation.date_end') %>:</strong>
     <%= periods_vacation.date_end %>
   </p>
 
   <p>
-    <strong>Gross salary:</strong>
-    <%= periods_vacation.gross_salary %>
+    <strong><%= t('activerecord.attributes.periods_vacation.gross_salary') %>:</strong>
+    <%= number_to_currency(periods_vacation.gross_salary) %>
   </p>
 
   <p>
-    <strong>Average value:</strong>
+    <strong><%= t('activerecord.attributes.periods_vacation.average_value') %>:</strong>
     <%= periods_vacation.average_value %>
   </p>
 
   <p>
-    <strong>Number dependents:</strong>
+    <strong><%= t('activerecord.attributes.periods_vacation.number_dependents') %>:</strong>
     <%= periods_vacation.number_dependents %>
   </p>
 
   <p>
-    <strong>Pension alimentary:</strong>
+    <strong><%= t('activerecord.attributes.periods_vacation.pension_alimentary') %>:</strong>
     <%= periods_vacation.pension_alimentary %>
   </p>
 
   <p>
-    <strong>Bonus pecuniary:</strong>
+    <strong><%= t('activerecord.attributes.periods_vacation.bonus_pecuniary') %>:</strong>
     <%= periods_vacation.bonus_pecuniary %>
   </p>
 
   <p>
-    <strong>Advance parcel:</strong>
+    <strong><%= t('activerecord.attributes.periods_vacation.advance_parcel') %>:</strong>
     <%= periods_vacation.advance_parcel %>
   </p>
 
   <p>
-    <strong>Days:</strong>
+    <strong><%= t('activerecord.attributes.periods_vacation.days') %>:</strong>
     <%= periods_vacation.days %>
   </p>
 
   <p>
-    <strong>Employee:</strong>
-    <%= periods_vacation.employee_id %>
+    <strong><%= t('activerecord.attributes.periods_vacation.employee') %>:</strong>
+    <%= periods_vacation.employee.name %>
   </p>
 
 </div>
