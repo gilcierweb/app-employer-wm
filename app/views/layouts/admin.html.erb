@@ -10,7 +10,8 @@
     <title>AppEmployerWm</title>
    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <%= stylesheet_link_tag "admin_load", "data-turbo-track": "reload" %>
+   <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
+   <%= stylesheet_link_tag "admin_load", "data-turbo-track": "reload" %>
   </head>
 
   <body>
@@ -26,17 +27,24 @@
 
   <main class="main-content">
     <%= render 'layouts/partials/admin/header' %>
-
-
     <%= render 'layouts/partials/flash_message' %>
-    <%= yield %>
+
+    <div class="conatiner-fluid content-inner mt-4">
+      <div class="row">
+        <div class="col-12">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </main>
 
     <!-- Scripts -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <%= javascript_include_tag "admin_load", "data-turbo-track": "reload", defer: true %>
+  <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
+  <script src="https://npmcdn.com/flatpickr@4.6.3/dist/l10n/pt.js"></script>
+  <%= javascript_include_tag "admin_load", "data-turbo-track": "reload", defer: true %>
 
   </body>
 </html>

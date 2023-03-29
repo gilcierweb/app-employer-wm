@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-header d-flex justify-content-between">
+    <div class="header-title">
+      <h1>Empresas</h1>
+    </div>
+  </div>
+  <div id="companies" class="card-body p-0">
+    <div class="table-responsive mt-4">
+      <table id="basic-table" class="table table-striped mb-0" role="grid">
+        <thead>
+        <tr>
+          <th><%= t('activerecord.attributes.company.name') %></th>
+          <th><%= t('activerecord.attributes.company.fantasy_name') %></th>
+          <th><%= t('activerecord.attributes.company.cnpj') %></th>
+          <th><%= t('activerecord.attributes.company.owner_name') %></th>
+          <th><%= t('activerecord.attributes.company.location') %></th>
+          <th><%= t('activerecord.attributes.company.site_url') %></th>
+          <th><%= t('activerecord.attributes.company.email') %></th>
+          <th><%= t('activerecord.attributes.company.description') %></th>
+          <th><%= t('activerecord.attributes.company.birth_date') %></th>
+          <th><%= t('activerecord.attributes.company.logo') %></th>
+          <th><%= t('activerecord.attributes.company.active') %></th>
+          <th><%= t('action') %></th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <%= render partial: "company_table", collection: @companies, as: :company %>
+
+
+
+        </tbody>
+      </table>
+    </div>
+
+
+    <%= link_to t('new'), new_admin_company_path, class: 'btn btn-success' %>
+  </div>
+</div>

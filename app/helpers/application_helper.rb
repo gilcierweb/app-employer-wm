@@ -11,4 +11,14 @@ module ApplicationHelper
       "alert alert-warning"
     end
   end
+
+  def display_boolean(level)
+    case level
+    when 1, true, 'active' then
+      'Ativo'
+    when 0, false, 'inactive' then
+      'Inativo'
+    end
+  end
+
 end

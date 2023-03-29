@@ -23,6 +23,22 @@ pt-BR:
         current_password: "Senha Atual"
         remember_me: "Entrar automaticamente"
 
+      company:
+        name: 'Nome'
+        fantasy_name: 'Nome fantasia'
+        cnpj: 'CNPJ'
+        owner_name: 'Nome do responsável'
+        site_url: 'Site'
+        email: 'Email'
+        location: 'Localização'
+        description: 'Descrição'
+        birth_date: 'Data de Fundação'
+        logo: 'Logo'
+        active: 'Status'
+        actives:
+          active: 'Ativo'
+          inactive: 'Inativo'
+
       contact:
         full_name: 'Nome completo'
         email: 'Email'

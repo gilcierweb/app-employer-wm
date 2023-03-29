@@ -11,7 +11,7 @@ class CreateCompanies < ActiveRecord::Migration[7.0]
       t.text :description
       t.date :birth_date
       t.string :logo
-      t.boolean :active
+      t.boolean :active, default: true
 
       t.timestamps
     end

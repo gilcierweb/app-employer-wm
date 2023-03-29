@@ -1,0 +1,74 @@
+<%= form_with(model: [:admin, company], class: "row g-3") do |form| %>
+  <% if company.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <h2><%= pluralize(company.errors.count, "error") %> prohibited this company from being saved:</h2>
+
+      <ul>
+        <% company.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="col-md-6 mb-3">
+    <%= form.label :name, class: "form-label" %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <%= form.label :fantasy_name, class: "form-label" %>
+    <%= form.text_field :fantasy_name, class: "form-control" %>
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <%= form.label :cnpj, class: "form-label" %>
+    <%= form.number_field :cnpj, class: "form-control" %>
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <%= form.label :owner_name, class: "form-label" %>
+    <%= form.text_field :owner_name, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :location, class: "form-label" %>
+    <%= form.text_field :location, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :site_url, class: "form-label" %>
+    <%= form.text_field :site_url, class: "form-control" %>
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <%= form.label :email, class: "form-label" %>
+    <%= form.text_field :email, class: "form-control" %>
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <%= form.label :birth_date, class: "form-label" %>
+    <%= form.text_field :birth_date, class: "form-control dateflatpickr" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :description, class: "form-label" %>
+    <%= form.text_area :description, class: "form-control" %>
+  </div>
+
+
+
+  <div class="mb-3">
+    <%= form.label :logo, class: "form-label" %>
+    <%= form.text_field :logo, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :active, class: "form-label" %>
+    <%= form.check_box :active, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
