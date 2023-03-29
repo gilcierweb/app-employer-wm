@@ -11,4 +11,5 @@ class PeriodsVacation < ApplicationRecord
   validates_presence_of :date_end
   validates_presence_of :gross_salary
   validates_presence_of :days
+  validates_inclusion_of :days, in: 10..30
 end
