@@ -74,6 +74,7 @@ pt-BR:
         gross_salary: 'Salário bruto'
         days: 'Dias'
         employee_id: 'Funcionário'
+        employee: 'Funcionário'
         bonus_pecuniaries:
           yes: 'sim'
           no: 'Não'

@@ -1,5 +1,5 @@
 class PeriodsVacation < ApplicationRecord
-  include Orderable
+  include Orderable, CalculatorVacations
 
   enum bonus_pecuniary: { no: false, yes: true }
   enum advance_parcel: { no_ap: false, yes_ap: true }

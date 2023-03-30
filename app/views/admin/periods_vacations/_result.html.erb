@@ -56,7 +56,7 @@
     # Total bruto = ( R$ 1.200,00 + R$ 400,00 + R$ 900,00 + R$ 600,00 + 200 ) = R$ 3.300,00
     total_vacations_gross = (days_amount + total_vacations_1_3 + calculator_13 + total_bonus_pecuniary + total_bonus_pecuniary_1_3)
     # Descontos: INSS = R$ 124,47 | IRRF = Isento
-    discounts = 1
+    discounts = (PeriodsVacation.calculator_inss(gross_salary) - PeriodsVacation.calculator_irrf(gross_salary))
     # Total líquido à receber = ( R$ 3.300,00 - R$ 124,47) = R$ 3.175,53
     total_vacations_liquid = (total_vacations_gross - discounts)
 
@@ -65,11 +65,12 @@
   else
 
     total_vacations = (gross_salary / 100.to_d) + total_vacations_1_3
-    discounts = 1
+    discounts = (PeriodsVacation.calculator_inss(gross_salary) - PeriodsVacation.calculator_irrf(gross_salary))
     total_vacations_liquid = total_vacations - discounts.to_i
 
   end
 %>
+
 <table id="basic-table-result" class="table table-striped my-4" role="grid">
   <thead class="text-primary">
   <tr>
