@@ -24,4 +24,13 @@ module ApplicationHelper
     end
   end
 
+  def display_boolean_raw(level)
+    case level
+    when 1, true, 'active', 'yes', 'yes_ap' then
+      'Sim'
+    when 0, false, 'inactive', 'no' , 'no_ap' then
+      'Não'
+    end
+  end
+
 end

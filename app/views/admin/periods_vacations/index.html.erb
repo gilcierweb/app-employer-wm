@@ -29,14 +29,14 @@
         <% @periods_vacations.each do |periods_vacation| %>
           <tr>
             <td><%= periods_vacation.name %></td>
-            <td><%= periods_vacation.date_start %></td>
-            <td><%= periods_vacation.date_end %></td>
+            <td><%= periods_vacation.date_start.strftime("%d/%m/%Y") %></td>
+            <td><%= periods_vacation.date_end.strftime("%d/%m/%Y") %></td>
             <td><%= number_to_currency(periods_vacation.gross_salary) %></td>
             <td><%= periods_vacation.average_value %></td>
             <td><%= periods_vacation.number_dependents %></td>
             <td><%= periods_vacation.pension_alimentary %></td>
-            <td><%= periods_vacation.bonus_pecuniary %></td>
-            <td><%= periods_vacation.advance_parcel %></td>
+            <td><%= display_boolean_raw(periods_vacation.bonus_pecuniary) %></td>
+            <td><%= display_boolean_raw(periods_vacation.advance_parcel) %></td>
             <td><%= periods_vacation.days %></td>
             <td><%= periods_vacation.employee.name %></td>
             <td><%= link_to t('show'), [:admin, periods_vacation], class: 'btn btn-info' %>

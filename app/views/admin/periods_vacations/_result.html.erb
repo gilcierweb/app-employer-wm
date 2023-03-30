@@ -26,18 +26,6 @@
   # Acima de 4.664,68	27,50	869,36
   # Dedução por dependente: R$ 189,59
 
-  # ferias1-3 = gross_salary / 3 =
-  # ferias-total = gross_salary + ferias1-3 =
-  # Descontos = INSS, IRRF
-  # total = (ferias-total - INSS - IRRF) =
-
-  # total_vacations_13 = gross_salary / 3
-  # total_vacations = gross_salary  + total_vacations_13
-  # INSS = 1
-  # IRRF = 1
-  # discounts = 'INSS, IRRF'
-  # total_vacations_liquid = (total_vacations - INSS - IRRF)
-
   total_vacations_liquid = 0
   total_vacations_gross = 0
   discounts = 0
@@ -93,14 +81,62 @@
   </thead>
   <tbody>
   <tr>
-    <td><%= %></td>
-    <td><%= %></td>
-    <td><%= %></td>
+    <td>Férias</td>
+    <td></td>
+    <td></td>
     <td><span class="text-danger"><%= number_to_currency(discounts) %></span></td>
   </tr>
   <tr>
-    <td>Valor Líquido das Férias</td>
-    <td><span class="text-success"><%= number_to_currency(total_vacations_liquid) %></span></td>
+    <td>⅓ de Férias</td>
+    <td></td>
+    <td></td>
+    <td><span class="text-danger"><%= number_to_currency(discounts) %></span></td>
+  </tr>
+  <tr>
+    <td>Abono Pecuniário</td>
+    <td></td>
+    <td><span class="text-success"><%= number_to_currency(discounts) %></span></td>
+    <td><span class="text-danger"><%= number_to_currency(discounts) %></span></td>
+  </tr>
+  <tr>
+    <td>⅓ Abono Pecuniário</td>
+    <td></td>
+    <td><span class="text-success"><%= number_to_currency(discounts) %></span></td>
+    <td><span class="text-danger"><%= number_to_currency(discounts) %></span></td>
+  </tr>
+  <tr>
+    <td>Adiantamento 13º</td>
+    <td></td>
+    <td><span class="text-success"><%= number_to_currency(discounts) %></span></td>
+    <td><span class="text-danger"><%= number_to_currency(discounts) %></span></td>
+  </tr>
+  <tr>
+    <td>INSS Férias</td>
+    <td>7,5%</td>
+    <td><span class="text-success"><%= number_to_currency(discounts) %></span></td>
+    <td><span class="text-danger"><%= number_to_currency(discounts) %></span></td>
+  </tr>
+  <tr>
+    <td>IRRF</td>
+    <td>7,5%</td>
+    <td><span class="text-success"><%= number_to_currency(discounts) %></span></td>
+    <td><span class="text-danger"><%= number_to_currency(discounts) %></span></td>
+  </tr>
+  <tr>
+    <td>Pensão Alimentícia de Férias</td>
+    <td></td>
+    <td><span class="text-success"><%= number_to_currency(discounts) %></span></td>
+    <td><span class="text-danger"><%= number_to_currency(discounts) %></span></td>
+  </tr>
+  <tr>
+    <td>Total</td>
+    <td></td>
+    <td></td>
+    <td><span class="text-danger"><%= number_to_currency(discounts) %></span></td>
+  </tr>
+  <tr>
+    <td colspan="2"><h4>Valor Líquido das Férias</h4></td>
+    <td colspan="2"><h5 class="text-success"><%= number_to_currency(total_vacations_liquid) %></h5></td>
   </tr>
   </tbody>
 </table>

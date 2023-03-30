@@ -6,12 +6,12 @@
 
   <p>
     <strong><%= t('activerecord.attributes.periods_vacation.date_start') %>:</strong>
-    <%= periods_vacation.date_start %>
+    <%= periods_vacation.date_start.strftime("%d/%m/%Y") %>
   </p>
 
   <p>
     <strong><%= t('activerecord.attributes.periods_vacation.date_end') %>:</strong>
-    <%= periods_vacation.date_end %>
+    <%= periods_vacation.date_end.strftime("%d/%m/%Y") %>
   </p>
 
   <p>
@@ -36,12 +36,12 @@
 
   <p>
     <strong><%= t('activerecord.attributes.periods_vacation.bonus_pecuniary') %>:</strong>
-    <%= periods_vacation.bonus_pecuniary %>
+    <%= display_boolean_raw(periods_vacation.bonus_pecuniary) %>
   </p>
 
   <p>
     <strong><%= t('activerecord.attributes.periods_vacation.advance_parcel') %>:</strong>
-    <%= periods_vacation.advance_parcel %>
+    <%= display_boolean_raw(periods_vacation.advance_parcel) %>
   </p>
 
   <p>
