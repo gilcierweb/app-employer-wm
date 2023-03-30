@@ -38,7 +38,7 @@ module CalculatorVacations
       value = 0
 
       if IRRF_FREE.include?(amount)
-        value = amount # 0%
+        value = 0 # 0%
       elsif IRRF_FIRST.include?(amount)
         value = (amount * 0.078) # 7,5%
       elsif IRRF_SECOND.include?(amount)
